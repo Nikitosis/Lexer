@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.nio.charset.Charset;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -15,10 +16,7 @@ public class Main {
         Reader reader = new InputStreamReader(inputStream, Charset.defaultCharset());
         Reader bufferedReader = new BufferedReader(reader);
 
-        int r;
-        while((r = bufferedReader.read()) != -1) {
-            char c = (char) r;
-            System.out.print(c);
-        }
+        List<Token> tokens = Lexer.getTokens(bufferedReader);
+
     }
 }
