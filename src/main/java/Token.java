@@ -1,5 +1,8 @@
+import lombok.Getter;
+
+@Getter
 public class Token {
-    private enum TokenType {
+    public enum TokenType {
         COMMENT, WHITESPACE, IDENTIFIER, OPERATOR, SEPARATOR, INT_LITERAL, FLOAT_LITERAL, CHAR_LITERAL, STRING_LITERAL, BOOLEAN_LITERAL, NULL_LITERAL, KEYWORD, ERROR
     }
 

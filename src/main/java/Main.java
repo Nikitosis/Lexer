@@ -16,7 +16,11 @@ public class Main {
         Reader reader = new InputStreamReader(inputStream, Charset.defaultCharset());
         Reader bufferedReader = new BufferedReader(reader);
 
-        List<Token> tokens = Lexer.getTokens(bufferedReader);
+        Lexer lexer = new Lexer();
+        List<Token> tokens = lexer.getTokens(bufferedReader);
+        for(Token token : tokens) {
+            System.out.print(String.format("(type=%s, data=%s", token.getType(), token.getData()));
+        }
 
     }
 }
