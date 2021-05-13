@@ -17,7 +17,7 @@ public class CharacterDeterminator {
     );
 
     public static boolean isSeparator(Character c) {
-        return c == '(' || c == ')' || c == '{' || c == '}' || c == '[' || c == ']' || c == ';' || c == ',';
+        return c == '(' || c == ')' || c == '{' || c == '}' || c == '[' || c == ']' || c == ';' || c == ',' || c=='.';
     }
 
     public static boolean isOperator(Character c) {

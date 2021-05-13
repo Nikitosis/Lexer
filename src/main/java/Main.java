@@ -18,8 +18,9 @@ public class Main {
 
         Lexer lexer = new Lexer();
         List<Token> tokens = lexer.getTokens(bufferedReader);
+
         for(Token token : tokens) {
-            System.out.print(String.format("(type=%s, data=%s", token.getType(), token.getData()));
+            System.out.println(String.format("(%s, %s)", token.getType(), token.getData()));
         }
 
     }
