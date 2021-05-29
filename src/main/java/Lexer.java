@@ -110,6 +110,7 @@ public class Lexer {
                 break;
             case OPERATOR_AND_EQUAL:
                 operatorAndEqualState(c);
+                break;
             case STAR_IN_MULTI_LINE_COMMENT:
                 starInMultilineCommentState(c);
                 break;
